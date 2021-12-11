@@ -29,6 +29,9 @@ requirements:
     - html5lib >=1.1
     - lockfile >=0.12.2
     - packaging >=21.0.0
+    # pip-api was made available
+    # on conda-forge in the same 
+    # PR as pip-audit. 
     - pip-api >=0.0.26
     - progress >=1.6    
     - resolvelib >=0.8.0
