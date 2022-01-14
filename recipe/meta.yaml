@@ -1,5 +1,5 @@
 {% set name = "pip-audit" %}
-{% set version = "1.1.1" %}
+{% set version = "1.1.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pip-audit-{{ version }}.tar.gz
-  sha256: 61d772968b6ef644f43ecceace89665d28d7ea521a9390e59188c4189d580856
+  sha256: 374e8528a1376145cbe0f0ec4a7b6a5ebfd6152f665d274498ea49d8bffef24c
 
 build:
   number: 0
@@ -30,7 +30,7 @@ requirements:
     - lockfile >=0.12.2
     - packaging >=21.0.0
     - pip-api >=0.0.26
-    - progress >=1.6    
+    - progress >=1.6
     - resolvelib >=0.8.0
 
 test:
