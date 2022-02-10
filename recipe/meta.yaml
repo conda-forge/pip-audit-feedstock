@@ -15,7 +15,8 @@ build:
   noarch: python
   entry_points:
     - pip-audit = pip_audit._cli:audit
-  script: {{ PYTHON }} -m pip install . -vv
+  script: 
+    - {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -70,6 +71,9 @@ about:
       [CycloneDX](https://cyclonedx.org/) XML or JSON
     - Human and machine-readable output formats (columnar, JSON)
     - Seamlessly reuses your existing local `pip` caches
+    
+    PyPI: [https://pypi.org/project/pip-audit/](https://pypi.org/project/pip-audit/)
+    
   doc_url: https://github.com/trailofbits/pip-audit
   dev_url: https://github.com/trailofbits/pip-audit
 
