@@ -15,8 +15,7 @@ build:
   noarch: python
   entry_points:
     - pip-audit = pip_audit._cli:audit
-  script: 
-    - {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
