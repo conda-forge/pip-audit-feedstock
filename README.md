@@ -34,6 +34,8 @@ support from Google. This is not an official Google product.
 - Human and machine-readable output formats (columnar, JSON)
 - Seamlessly reuses your existing local `pip` caches
 
+PyPI: [https://pypi.org/project/pip-audit/](https://pypi.org/project/pip-audit/)
+
 
 Current build status
 ====================
