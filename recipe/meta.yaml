@@ -1,5 +1,5 @@
 {% set name = "pip-audit" %}
-{% set version = "2.1.0" %}
+{% set version = "2.1.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pip-audit-{{ version }}.tar.gz
-  sha256: b987aa4c6b31e316db197d370443ff34053ca0400a27f7407e74a71d92006a89
+  sha256: 3c131ecb11a1c2487d25abe36ef72ab407003a7ba3febd492566f6595a6797a2
 
 build:
   number: 0
