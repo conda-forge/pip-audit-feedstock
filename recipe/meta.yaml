@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pip_audit-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pip_audit-{{ version }}.tar.gz
   sha256: 08891bbf179bffe478521f150818112bae998424f58bf9285c0078965aef38bc
 
 build:
@@ -14,15 +14,15 @@ build:
     - pip-audit = pip_audit._cli:audit
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - flit-core >=3.2,<4
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - cachecontrol >=0.13.0
     - cyclonedx-python-lib >=5,<8
     - html5lib >=1.1
@@ -41,6 +41,7 @@ test:
     - pip-audit --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/trailofbits/pip-audit
