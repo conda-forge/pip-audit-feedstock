@@ -1,5 +1,5 @@
 {% set name = "pip-audit" %}
-{% set version = "2.8.0" %}
+{% set version = "2.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pip_audit-{{ version }}.tar.gz
-  sha256: 9816cbd94de6f618a8965c117433006b3d565a708dc05d5a7be47ab65b66fa05
+  sha256: 0b998410b58339d7a231e5aa004326a294e4c7c6295289cdc9d5e1ef07b1f44d
 
 build:
   entry_points:
@@ -25,7 +25,7 @@ requirements:
     - platformdirs >=4.2.0
     - python >={{ python_min }}
     - cachecontrol >=0.13.0
-    - cyclonedx-python-lib >=5,<9
+    - cyclonedx-python-lib >=5,<10
     - html5lib >=1.1
     - packaging >=23.0.0
     - pip-api >=0.0.28
