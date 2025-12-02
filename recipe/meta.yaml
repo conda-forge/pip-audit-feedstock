@@ -1,5 +1,5 @@
 {% set name = "pip-audit" %}
-{% set version = "2.9.0" %}
+{% set version = "2.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pip_audit-{{ version }}.tar.gz
-  sha256: 0b998410b58339d7a231e5aa004326a294e4c7c6295289cdc9d5e1ef07b1f44d
+  sha256: 427ea5bf61d1d06b98b1ae29b7feacc00288a2eced52c9c58ceed5253ef6c2a4
 
 build:
   entry_points:
@@ -22,10 +22,12 @@ requirements:
     - flit-core >=3.2,<4
     - pip
   run:
+    - tomli >=2.2.1
+    - tomli-w >=1.2.0
     - platformdirs >=4.2.0
     - python >={{ python_min }}
     - cachecontrol >=0.13.0
-    - cyclonedx-python-lib >=5,<10
+    - cyclonedx-python-lib >=5,<12
     - html5lib >=1.1
     - packaging >=23.0.0
     - pip-api >=0.0.28
